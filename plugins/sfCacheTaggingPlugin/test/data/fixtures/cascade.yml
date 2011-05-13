@@ -1,0 +1,88 @@
+RelCategory:
+  RelCategory_1:
+    title: Tech
+  RelCategory_2:
+    title: Life
+  RelCategory_3:
+    title: Sport
+
+RelSite:
+  RelSite_1:
+    domain: google.com
+    Category: RelCategory_1
+  RelSite_2:
+    domain: vimeo.com
+    Category: RelCategory_1
+  RelSite_3:
+    domain: bbc.com
+    Category: RelCategory_2
+  RelSite_4:
+    domain: ted.com
+    Category: RelCategory_2
+
+RelSiteSetting:
+  RelSiteSetting_1:
+    Site: RelSite_1
+    is_secure: true
+    is_closed: false
+  RelSiteSetting_2:
+    Site: RelSite_2
+    is_secure: false
+    is_closed: false
+  RelSiteSetting_3:
+    Site: RelSite_3
+    is_secure: false
+    is_closed: true
+  RelSiteSetting_4:
+    Site: RelSite_4
+    is_secure: true
+    is_closed: true
+
+RelCulture:
+  RelCulture_1:
+    lang: en
+  RelCulture_2:
+    lang: ru
+  RelCulture_3:
+    Parent: RelCulture_1
+    lang: en_GB
+  RelCulture_4:
+    Parent: RelCulture_1
+    lang: en_US
+  RelCulture_5:
+    lang: de
+  RelCulture_6:
+    Parent: RelCulture_5
+    lang: de_CH
+  RelCulture_7:
+    Parent: RelCulture_5
+    lang: de_LU
+  RelCulture_8:
+    Parent: RelCulture_5
+    lang: de_DE
+  RelCulture_9:
+    Parent: RelCulture_5
+    lang: de_LI
+
+RelSiteCulture:
+  RelSiteCulture_1_1:
+    Culture: RelCulture_1
+    Site: RelSite_1
+  RelSiteCulture_2_1:
+    Culture: RelCulture_2
+    Site: RelSite_1
+  RelSiteCulture_5_1:
+    Culture: RelCulture_5
+    Site: RelSite_1
+  RelSiteCulture_2_2:
+    Culture: RelCulture_2
+    Site: RelSite_2
+  RelSiteCulture_5_2:
+    Culture: RelCulture_5
+    Site: RelSite_2
+  RelSiteCulture_1_3:
+    Culture: RelCulture_1
+    Site: RelSite_3
+  RelSiteCulture_7_3:
+    Culture: RelCulture_7
+    Site: RelSite_3

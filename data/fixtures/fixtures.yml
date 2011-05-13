@@ -1,0 +1,47 @@
+sfGuardUser:
+  User_admin:
+    first_name:     John
+    last_name:      Doe
+    email_address:  john.doe@gmail.com
+    username:       admin
+    password:       admin
+    is_super_admin: true
+    Groups:         [Group_admin]
+
+sfGuardGroup:
+  Group_admin:
+    name:           admin
+    description:    Administrator group
+    Permissions:    [Permission_admin]
+
+  Group_customer:
+    name:           customer
+    description:    Customer group
+    Permissions:    [Permission_customer]
+
+  Group_page_editor:
+    name:           page_editor
+    description:    Page editor group
+    Permissions:    [Permission_page_editor]
+
+  Group_user_editor:
+    name:           user_editor
+    description:    User editor group
+    Permissions:    [Permission_user_editor]
+
+sfGuardPermission:
+  Permission_admin:
+    name:           admin
+    description:    Administrator permission
+
+  Permission_customer:
+    name:           customer
+    description:    Customer permission
+
+  Permission_page_editor:
+    name:           page_editor
+    description:    Page editor permission
+
+  Permission_user_editor:
+    name:           user_editor
+    description:    User editor permission

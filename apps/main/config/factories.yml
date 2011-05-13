@@ -1,0 +1,53 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/05-Factories
+
+prod:
+  logger:
+    class:   sfNoLogger
+    param:
+      level:   err
+      loggers: ~
+
+test:
+  storage:
+    class: sfSessionTestStorage
+    param:
+      session_path: %SF_TEST_CACHE_DIR%/sessions
+
+  response:
+    class: sfWebResponse
+    param:
+      send_http_headers: false
+
+  mailer:
+    param:
+      delivery_strategy: none
+
+dev:
+  mailer:
+    param:
+      delivery_strategy: none
+
+all:
+  routing:
+    class: sfPatternRouting
+    param:
+      generate_shortest_url:            true
+      extra_parameters_as_query_string: true
+
+  view_cache_manager:
+    class: sfViewCacheTagManager
+
+  view_cache:
+    class: sfTaggingCache
+    param:
+      storage:
+        class: sfFileTaggingCache
+        param:
+          automatic_cleaning_factor: 0
+          cache_dir: %SF_CACHE_DIR%/sf_tag_cache
+      logger:
+        class: sfFileCacheTagLogger
+        param:
+          file: %SF_LOG_DIR%/cache_%SF_ENVIRONMENT%.log
+          format: "%char% %microtime% %key%%EOL%"

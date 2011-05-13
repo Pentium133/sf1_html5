@@ -1,0 +1,14 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  sf_guard_plugin:
+    remember_key_expiration_age:  2592000   # 30 days in seconds
+    remember_cookie_name:         dartsclub
+
+  sfImageTransformPlugin:
+    mime_type:
+      auto_detect:  true
+      library:    gd_mime_type #  gd_mime_type (GD), Fileinfo (PECL), MIME_Type (PEAR)
+    font_dir:     %SF_PLUGINS_DIR%/sfImageTransformExtraPlugin/data/example-resources/fonts

@@ -1,0 +1,7 @@
+.idea/*
+cache/*
+log/*
+nbproject/*
+web/sfDoctrinePlugin
+web/sfAdminDashPlugin
+/web/uploads/asset-cache/*

@@ -1,0 +1,23 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  sf_admin_dash:
+    site:                         DartsClub
+    include_jquery:               false
+    include_jquery_no_conflict:   false
+
+    categories:
+      Users:
+        credentials:      [[ user_editor ]]
+        items:
+          Users:
+            url:          sf_guard_user
+            image:        users.png
+          Groups:
+            url:          sf_guard_group
+            image:        categories.png
+          Permissions:
+            url:          sf_guard_permission
+            image:        categories.png
